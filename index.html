@@ -31,6 +31,14 @@
       margin: 0.25rem;
     }
 
+    #nicknameInput {
+      border: none;
+      padding: 0 1rem;
+      border-radius: 2rem;
+      margin: 0.25rem;
+    }
+
+
     #sendButton {
       background: #333;
       border: none;
@@ -64,6 +72,7 @@
 <body>
   <ul id="messagesList"></ul>
   <div class="bottom_bar">
+    <input id="nicknameInput" placeholder="Nickname" />
     <input id="messageInput" autocomplete="off" placeholder="Type a message" />
     <button id="sendButton">Send</button>
   </div>
@@ -72,9 +81,11 @@
     const socket = io();
     const messagesList = document.getElementById('messagesList');
     const messageInput = document.getElementById('messageInput');
+    const nicknameInput = document.getElementById('nicknameInput');
+   
     const sendButton = document.getElementById('sendButton');
     sendButton.addEventListener('click', function () {
-      socket.emit('chat message', messageInput.value);
+      socket.emit('chat message', nicknameInput.value + ": " + messageInput.value);
       messageInput.value = '';
     });
     socket.on('chat message', function (msg) {
