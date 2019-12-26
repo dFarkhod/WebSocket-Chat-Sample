@@ -1,13 +1,8 @@
-# chat-example
+# WebSocket-Chat-Sample
+This is a sample Node.js\JavaScript sample for using WebSockets with socket.io library
+Original sources codes were forked from: https://github.com/socketio/chat-example.git
+Got rid of jquery, using ES6 syntax, modified CSS.
 
-This is the source code for a very simple chat example used for
-the [Getting Started](http://socket.io/get-started/chat/) guide
-of the Socket.IO website.
-
-Please refer to it to learn how to run this application.
-
-You can also spin up a free Heroku dyno to test it out:
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/socketio/chat-example)
-
-Besides, the application is deployed on [Now](https://zeit.co/now): https://socketio-chat-example.now.sh/
+Bu loyihada socket.io bibliotekasi yordamida WebSocket'lar bilan ishlashga misol keltirigan.
+Loyiha socket.io'ning sahifasida olinib, unga ozgina o'zgartirish kiritilgan: https://github.com/socketio/chat-example.git
+jQuery olib tashlangan, JS da ES6 ishlatilgan va CSS bir oz o'zgartirilgan.
